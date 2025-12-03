@@ -18,12 +18,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearch, goHome, isDarkMode, to
             <div className="transition-transform duration-300 group-hover:scale-105">
               <img 
                 src="/IUST-University-Logo.png" 
-                alt="SSH Senfi Software Hub" 
+                alt="SSH" 
                 className="h-12 w-auto object-contain dark:brightness-0 dark:invert transition-all duration-300 opacity-90 group-hover:opacity-100" 
               />
             </div>
             <div className="flex flex-col">
-               <span className="text-lg font-black text-gray-800 dark:text-white tracking-tight leading-none group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">SSH Senfi Software Hub</span>
+               <span className="text-lg font-black text-gray-800 dark:text-white tracking-tight leading-none group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">SSH</span>
                <span className="text-xs font-bold text-gray-500 dark:text-gray-400 mt-1">دانشگاه علم و صنعت ایران</span>
             </div>
           </div>

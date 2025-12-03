@@ -1,8 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { SoftwareDetail as SoftwareDetailType } from '../types';
 import { Download, Calendar, HardDrive, ShieldCheck, ArrowRight, Share2, Info, Loader2, CheckCircle2 } from 'lucide-react';
-import { AIAssistant } from '../components/AIAssistant';
 import { apiService, getImageUrl } from '../services/apiService';
 
 interface SoftwareDetailProps {
@@ -173,7 +171,7 @@ export const SoftwareDetail: React.FC<SoftwareDetailProps> = ({ slug, onBack }) 
 
                   <div className="mt-8 p-5 bg-yellow-100/40 dark:bg-yellow-900/20 rounded-2xl flex gap-3 text-yellow-800 dark:text-yellow-400 text-sm font-medium border border-yellow-200/50 dark:border-yellow-800/30 backdrop-blur-sm">
                     <Info className="w-5 h-5 flex-shrink-0" />
-                    <p>در صورت خرابی لینک‌ها، لطفا از طریق بخش نظرات یا دستیار هوشمند به ما اطلاع دهید.</p>
+                    <p>در صورت خرابی لینک‌ها، لطفا از طریق ایمیل پشتیبانی به ما اطلاع دهید.</p>
                   </div>
                 </div>
               )}
@@ -256,9 +254,6 @@ export const SoftwareDetail: React.FC<SoftwareDetailProps> = ({ slug, onBack }) 
           </div>
         </div>
       </div>
-      
-      {/* Inject Context to AI */}
-      <AIAssistant context={`User is viewing the software "${software.title}". Description: ${software.description}.`} />
     </div>
   );
 };

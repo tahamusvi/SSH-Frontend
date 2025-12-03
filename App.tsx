@@ -3,8 +3,7 @@ import { Navbar } from './components/Navbar';
 import { SoftwareCard } from './components/SoftwareCard';
 import { SoftwareDetail } from './pages/SoftwareDetail';
 import { Page, Category, SoftwareSummary } from './types';
-import { AIAssistant } from './components/AIAssistant';
-import { Filter, Layers, Mail, Phone, MapPin, ExternalLink, Globe, Github, Loader2 } from 'lucide-react';
+import { Filter, Layers, Mail, Phone, MapPin, Loader2 } from 'lucide-react';
 import { apiService } from './services/apiService';
 
 const App: React.FC = () => {
@@ -116,7 +115,7 @@ const App: React.FC = () => {
             {/* Hero / Intro */}
             <div className="mb-12 text-center space-y-6 pt-8">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-gray-800 dark:text-white tracking-tight leading-tight drop-shadow-sm">
-                SSH Senfi Software Hub <br className="hidden md:block" />
+                Senfi Software Hub <br className="hidden md:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 mt-2 inline-block">دانشگاه علم و صنعت ایران</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-medium leading-8">
@@ -178,8 +177,6 @@ const App: React.FC = () => {
                 <p className="text-gray-500 dark:text-gray-400 mt-2">لطفا عبارت جستجو یا دسته‌بندی را تغییر دهید.</p>
               </div>
             )}
-            
-            <AIAssistant context="User is on the IUST software repository home page." />
           </div>
         ) : (
           selectedSoftwareSlug && (
@@ -194,7 +191,7 @@ const App: React.FC = () => {
       {/* Expanded IUST Footer */}
       <footer className="relative bg-white/50 dark:bg-gray-900/60 backdrop-blur-2xl border-t border-white/30 dark:border-gray-800/50 mt-20 pt-16 pb-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
             
             {/* Column 1: About */}
             <div className="space-y-4">
@@ -239,27 +236,6 @@ const App: React.FC = () => {
                   <span>support@iust.ac.ir</span>
                 </li>
               </ul>
-            </div>
-
-            {/* Column 4: Newsletter/Social */}
-            <div>
-               <h4 className="font-bold text-gray-900 dark:text-white text-lg mb-6">شبکه‌های اجتماعی</h4>
-               <div className="flex gap-4 mb-6">
-                 <a href="#" className="bg-gray-200 dark:bg-gray-800 p-3 rounded-xl hover:bg-teal-500 hover:text-white dark:hover:bg-teal-600 transition-all group">
-                   <Globe className="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-white" />
-                 </a>
-                 <a href="#" className="bg-gray-200 dark:bg-gray-800 p-3 rounded-xl hover:bg-teal-500 hover:text-white dark:hover:bg-teal-600 transition-all group">
-                   <Github className="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-white" />
-                 </a>
-                 <a href="#" className="bg-gray-200 dark:bg-gray-800 p-3 rounded-xl hover:bg-teal-500 hover:text-white dark:hover:bg-teal-600 transition-all group">
-                   <ExternalLink className="w-5 h-5 text-gray-600 dark:text-gray-400 group-hover:text-white" />
-                 </a>
-               </div>
-               <div className="bg-blue-50/50 dark:bg-blue-900/20 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30">
-                 <p className="text-xs text-blue-800 dark:text-blue-300 font-medium">
-                   دانشجویان گرامی، جهت دسترسی به اینترنت خوابگاه از نام کاربری و رمز عبور پرتال دانشجویی استفاده نمایید.
-                 </p>
-               </div>
             </div>
           </div>
 
